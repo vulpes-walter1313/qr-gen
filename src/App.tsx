@@ -25,12 +25,11 @@ function App() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    //formState: { errors },
     watch,
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
     setValToQr(data.link);
     const size = parseInt(data.size);
     setSize(size);
